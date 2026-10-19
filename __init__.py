@@ -161,7 +161,6 @@ class TfwrCompanionPlugin(NekoPluginBase):
         }
 
     async def _watch_op(self, action: str = "status") -> dict:
-        cfg = await self._cfg()
         action = (action or "status").strip().lower()
         if action == "start":
             if self._watch_task and not self._watch_task.done():
